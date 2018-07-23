@@ -9,7 +9,7 @@ export class ContatosDataBaseService{
 
     constructor (){ }
 
-    setContato(novoContato: ContatoModel): void {
+    public setContato(novoContato: ContatoModel): void {
         this.meusContatos.push(novoContato);
         this.enviarContato.emit(this.meusContatos);
     }
