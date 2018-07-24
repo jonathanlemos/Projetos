@@ -19,5 +19,4 @@ export class ContatosDataBaseService{
         contato = this.meusContatos[id];
         return contato;
     }
-
 }

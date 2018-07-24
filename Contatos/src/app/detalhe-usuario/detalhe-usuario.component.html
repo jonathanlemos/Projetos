@@ -1,3 +1,27 @@
-<p>
-  detalhe-usuario works!
-</p>
+<h3>Detalhe do Contato</h3>>
+
+<div class="row justify-content-start" >
+  <div class="col-9">
+    <!--Nome-->
+    <div class="form-group" >
+      <label for="nome">Nome</label>
+      <p id="nome"><strong>{{contato?.nome}}</strong></p>
+    </div>
+    <!--Telefone-->
+    <div class="form-group" >
+      <label for="telefone">Telefone</label>
+      <p id="telefone"><strong>{{contato?.telefone}}</strong></p>
+    </div>
+
+    <!--Email-->
+    <div class="form-group" >
+      <label for="email">Email</label>
+      <p id="email"><strong>{{contato?.email}}</strong></p>
+    </div>
+    <!--Tipo-->
+    <div class="form-group" >
+      <label for="tipo">Tipo</label>
+      <p id="tipo"><strong>{{contato?.tipo}}</strong></p>
+    </div>
+  </div>
+</div>

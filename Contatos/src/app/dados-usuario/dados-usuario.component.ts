@@ -22,13 +22,20 @@ export class DadosUsuarioComponent implements OnInit {
   }
 
   enviarDados(){
-    if(this._tipo != undefined){
+    if(this._tipo == undefined){
       this._tipo = this.tipos[0];
     }
+    let novoContato = new ContatoModel(this._nome, this._telefone, this._email, this._tipo);
+    this.dataBaseService.setContato(novoContato);
+    this.enviado = !this.enviado;
   }
 
-  novoContato = new ContatoModel(this._nome, this._telefone, this._email, this._tipo);
-  
-  //servico.setContato(novoContato);
+  voltar(){
+    this._nome = '';
+    this._telefone = '';
+    this._email = '';
+    this._tipo = '';
+    this.enviado = !this.enviado;
+  }
 
 }
