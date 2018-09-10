@@ -15,12 +15,12 @@ export class ListaUsuarioComponent implements OnInit {
   constructor(private dataBaseService: ContatosDataBaseService) { }
 
   ngOnInit() {
-    debugger
+    //sempre que houver mudança em enviarContato(subscribe faz isso) ele atualiza 
+    //a lista de contatos com os novos valores
     this.dataBaseService.enviarContato.subscribe(contatos=>this.listaDeContatos = contatos);
   }
 
-  contatoClicado(item:number){
-    debugger
+  contatoClicado(item:number){    
     this.idClicado.emit(item);
   }
 }
